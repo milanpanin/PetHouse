@@ -1,0 +1,568 @@
+:root {
+  --primary-color: #C89A5B;
+  --secondary-color-1: #555555;
+  --secondary-color-2: #f6f6f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  background-image: url("../Images/header.jpg");
+  background-position: bottom;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  text-shadow: 0 0 3px #000;
+}
+
+header nav {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+header nav .logo {
+  margin: 20px 0 0 0;
+}
+
+header nav .logo h1 {
+  font-size: 40px;
+  color: var(--primary-color);
+}
+
+header nav .logo p {
+  font-size: 18px;
+  margin: -5px 0 0 0;
+}
+
+header nav .nav-bar {
+  text-align: right;
+}
+
+header nav .nav-bar ul {
+  margin: 40px 0 0 0;
+}
+
+header nav .nav-bar ul li {
+  display: inline-block;
+  padding: 5px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+header nav .nav-bar ul li::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+header nav .nav-bar ul li:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+header article {
+  max-width: 1250px;
+  margin: 200px auto 0 auto;
+}
+
+header article h2 {
+  font-size: 45px;
+}
+
+header article p {
+  width: 600px;
+  font-size: 20px;
+  margin: 25px 0 30px 0;
+}
+
+header article button {
+  width: 260px;
+  font-size: 22px;
+  border-radius: 30px;
+  z-index: 1;
+  position: relative;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 0;
+  cursor: pointer;
+  text-shadow: 0 0 3px #000;
+  box-shadow: 0 0 5px 0 #000;
+}
+
+header article button::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid var(--primary-color);
+  transform-origin: center;
+  transform: scale(1);
+  border-radius: 30px;
+}
+
+header article button:hover::before {
+  transition: all 0.75s ease-in-out;
+  transform-origin: center;
+  transform: scale(1.75);
+  opacity: 0;
+}
+
+/* END OF HEADER */
+
+/* MAIN */
+  /* ABOUT */
+
+main .about {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main .about section:nth-child(1) {
+  text-align: right;
+  margin: 75px 25px 75px 0;
+}
+
+main .about section:nth-child(2) {
+  text-align: left;
+  margin: 75px 0 75px 25px;
+}
+
+main .about section:nth-child(2) h2 {
+  margin: 0 0 30px 0;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+
+main .about section:nth-child(2) p {
+  font-size: 18px;
+}
+
+/* END OF ABOUT */
+
+/* PETS */
+
+main .pets {
+  background-color: var(--secondary-color-2);
+  text-align: center;
+}
+
+main .pets h2 {
+  color: var(--secondary-color-1);
+  padding: 75px 0;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+main .pets .pet-list {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 96%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+main .pets .pet-list section {
+  background-color: #fff;
+  transition: .3s;
+}
+
+main .pets .pet-list section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 5px 0 var(--primary-color);
+}
+
+main .pets .pet-list .pet-1 .pet-image {
+  background-image: url("../Images/pet-1.png");
+  background-size: cover;
+  margin: 0 auto;
+}
+
+main .pets .pet-list .pet-2 .pet-image {
+  background-image: url("../Images/pet-2.png");
+  background-size: cover;
+  margin: 0 auto;
+}
+
+main .pets .pet-list .pet-3 .pet-image {
+  background-image: url("../Images/pet-3.png");
+  background-size: cover;
+  margin: 0 auto;
+}
+
+main .pets .pet-list section .pet-image {
+  width: 220px;
+  height: 330px;
+  background-color: #fff;
+  transform: none;
+  border: none;
+}
+
+main .pets .pet-list section h3 {
+  font-size: 25px;
+  padding: 10px 0;
+  color: var(--secondary-color-1);
+}
+
+main .pets .pet-list section button {
+  font-size: 18px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  background-color: #fbfbfb;
+  padding: 10px 30px;
+  margin: 25px 0;
+  cursor: pointer;
+  color: var(--secondary-color-1);
+  border: 1px solid var(--primary-color);
+  transition: .4s;
+}
+
+main .pets .pet-list section button:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+main .pets .rest {
+  width: 300px;
+  font-size: 21px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 15px 0;
+  margin: 75px 0;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  transition: .3s;
+  box-shadow: 0 0 5px 0 #000;
+}
+
+main .pets .rest:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+main .to-help {
+  height: 20px;
+}
+
+/* END OF PETS */
+
+/* HELP PETS */
+
+main .helpPet {
+  text-align: center;
+  color: var(--secondary-color-1);
+}
+
+main .helpPet h2 {
+  font-size: 35px;
+  margin: 60px 0 0 0;
+  font-weight: 400;
+}
+
+main .helpPet section {
+  max-width: 1000px;
+  width: 96%;
+  margin: 25px auto 100px auto;
+}
+
+main .helpPet section .box {
+  width: 150px;
+  display: inline-block;
+  margin: 50px 0 0 0;
+}
+
+main .helpPet section .box i {
+  font-size: 50px;
+  color: var(--primary-color);
+  margin: 0 0 10px 0;
+}
+
+/* END OF HELP PETS */
+
+/* DONATION */
+
+main .donation {
+  margin: 0 auto;
+  color: var(--secondary-color-1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--secondary-color-2);
+}
+
+main .donation section:nth-child(1) {
+  text-align: right;
+  margin: 75px 25px 50px 0;
+}
+
+main .donation section:nth-child(2) {
+  text-align: left;
+  margin: 75px 5px 75px 25px;
+  max-width: 450px;
+}
+
+main .donation section:nth-child(2) h2 {
+  margin: 0 0 15px 0;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+
+main .donation section:nth-child(2) .bankNum {
+  background-color: var(--primary-color);
+  max-width: 315px;
+  border-radius: 5px;
+  color: #fff;
+  margin: 0 0 15px 0;
+}
+
+main .donation section:nth-child(2) .bankNum i {
+  display: inline-block;
+  font-size: 25px;
+  margin: 5px 10px 5px 10px;
+}
+
+main .donation section:nth-child(2) .bankNum p {
+  display: inline-block;
+  font-size: 18px;
+}
+
+main .donation section:nth-child(2) .text {
+  font-size: 16px;
+}
+
+/* END OF DONATION*/
+
+/* FOOTER */
+
+footer {
+  color: #fff;
+  background-image: linear-gradient(to right, #443830, #1E1D22);
+  text-shadow: 0 0 3px #000;
+}
+
+footer article {
+  max-width: 980px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+footer section {
+  margin: 25px 0 0 0;
+}
+
+footer section h2 {
+  font-size: 25px;
+  margin: 50px 0 25px 0;
+  font-weight: 400;
+}
+
+footer section address {
+  color: var(--primary-color);
+}
+
+footer section address i,
+footer section address p {
+  display: inline-block;
+  padding: 3px;
+}
+
+/* END OF FOOTER */
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1300px) {
+
+  /* HEADER  - 1300px */
+  header nav {
+    margin: 0 25px 0 25px;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  header article {
+    margin: 200px auto 0 25px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  /* HEADER - 900px */
+  header {
+    height: 850px;
+  }
+
+  header nav {
+    text-align: center;
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas: "logo logo"
+      "nav-bar nav-bar";
+    width: 96%;
+    margin: 0;
+  }
+
+  header nav .logo {
+    grid-area: logo;
+  }
+
+  header nav .nav-bar {
+    grid-area: nav-bar;
+  }
+
+  header nav .nav-bar {
+    text-align: center;
+  }
+
+  header nav .nav-bar ul li {
+    font-size: 22px;
+  }
+
+  header article {
+    margin: 150px 0 0 25px;
+  }
+
+  /* PETS - 900px */
+  main .pets .pet-list .pet-3 {
+    display: none;
+  }
+
+  /* ABOUT - 900px */
+  main .about {
+    grid-template-columns: 1fr 5fr;
+  }
+
+  /* DONATION -  900px */
+  main .donation {
+    grid-template-columns: 1fr;
+  }
+
+  main .donation section:nth-child(1) {
+    display: none;
+  }
+
+  main .donation section:nth-child(2){
+    margin: 50px auto 75px auto;
+    text-align: center;
+  }
+
+  main .donation section:nth-child(2) .text {
+    margin: 0 auto;
+    width: 96%;
+  }
+
+  main .donation section:nth-child(2) .bankNum {
+    margin: 0 auto 15px auto;
+  }
+
+  /* FOOTER - 900px */
+  footer section {
+    margin: 0 0 50px 0;
+  }
+
+  footer section:nth-child(3) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+
+  /* HEADER - 620px */
+  header nav .nav-bar ul li {
+    width: 200px;
+    padding: 5px 0;
+    margin: 10px;
+  }
+
+  header article {
+    margin: 80px auto 0 auto;
+    text-align: center;
+  }
+
+  header article h2 {
+    font-size: 35px;
+    margin: 0 0 25px 0;
+  }
+
+  header article p {
+    width: 96%;
+    margin: 0 auto 25px auto;
+    font-size: 20px;
+  }
+
+  /* ABOUT  - 620px */
+  main .about {
+    grid-template-columns: 1fr;
+  }
+
+  main .about section:nth-child(1) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  /* PETS - 450px */
+  main .pets .pet-list .pet-2 {
+    display: none;
+  }
+
+  /* HELP PETS - 450px */
+
+  main .helpPet section .box:nth-child(3),
+  main .helpPet section .box:nth-child(4),
+  main .helpPet section .box:nth-child(5),
+  main .helpPet section .box:nth-child(6),
+  main .helpPet section .box:nth-child(8) {
+    display: none;
+  }
+
+  /* DONATION - 450px */
+  main .donation section:nth-child(2) .bankNum i,
+  main .donation section:nth-child(2) .bankNum p {
+    font-size: 16px;
+  }
+
+  /* FOOTER - 450px */
+  footer {
+    margin: -25px 0 0 0;
+  }
+
+  footer article {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+}
+
+/* END OF MEDIA QUERY */
