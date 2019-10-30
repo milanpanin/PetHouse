@@ -1,4 +1,4 @@
-# PetHouse
+# Pet House
 
 PetHouse is one of my landing page projects created for personal training and improvement my skills. <br />
 Project is live on https://pet-house-landing.web.app/. <br /> <br />
