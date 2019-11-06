@@ -18,7 +18,7 @@ body {
 
 /* HEADER */
 header {
-  background-image: url("../Images/header.jpg");
+  background-image: url("../Images/header.webp");
   background-position: bottom;
   background-size: cover;
   height: 100vh;
@@ -201,19 +201,19 @@ main .pets .pet-list section:hover {
 }
 
 main .pets .pet-list .pet-1 .pet-image {
-  background-image: url("../Images/pet-1.png");
+  background-image: url("../Images/pet-1.webp");
   background-size: cover;
   margin: 0 auto;
 }
 
 main .pets .pet-list .pet-2 .pet-image {
-  background-image: url("../Images/pet-2.png");
+  background-image: url("../Images/pet-2.webp");
   background-size: cover;
   margin: 0 auto;
 }
 
 main .pets .pet-list .pet-3 .pet-image {
-  background-image: url("../Images/pet-3.png");
+  background-image: url("../Images/pet-3.webp");
   background-size: cover;
   margin: 0 auto;
 }
